@@ -29,7 +29,7 @@ type card struct {
 func (c *card) String() string {
 	// TODO: レア度:名前のように文字列を作る
 	// 例："SR:ドラゴン"
-	return string(c.rarity) + ":" + c.name
+	return c.rarity.String() + ":" + c.name
 }
 
 type player struct {

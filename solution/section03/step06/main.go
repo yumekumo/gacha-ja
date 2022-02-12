@@ -1,4 +1,4 @@
-// STEP05: ガチャチケットを導入しよう（ポインタ）
+// STEP06: ガチャチケットを導入しよう（構造体）
 
 package main
 
@@ -57,9 +57,10 @@ func (p *player) draw(n int) {
 		p.tickets -= n
 		return
 	}
-
+	n -= p.tickets
 	p.tickets = 0
 	p.coin -= n * 10 // 1回あたり10枚消費する
+	println(p.coin)
 }
 
 func main() {
